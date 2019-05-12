@@ -79,11 +79,12 @@ class InstagramBot:
             driver.get(pic_href)
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             try:        
-                #action comment
+                
                 time.sleep(random.randint(2, 4))
+                #action comment 
                 comment_box = lambda: driver.find_element_by_xpath('//textarea[@aria-label="Add a comment…"]').click()
                 comment_box().click()
-                comment_box.send_keys('Test')
+                comment_box.send_keys('Test Test')
                 comment_box.send_keys(Keys.ENTER)
                 time.sleep(1)
 
