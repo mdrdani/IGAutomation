@@ -78,6 +78,15 @@ class InstagramBot:
                     time.sleep(2)
                 else:
                     print("Kamu Sudah Follow User ini")
+                
+                #action comment
+                time.sleep(random.randint(2, 4))
+                comment_box = lambda: driver.find_element_by_xpath('//textarea[@aria-label="Add a comment…"]').click()
+                comment_box().click()
+                comment_box.send_keys('Test')
+                comment_box.send_keys(Keys.ENTER)
+                time.sleep(1)
+                
                 #mencari element tombol love dan perintah klik 
                 like_button = lambda: driver.find_element_by_xpath('//span[@aria-label="Like"]').click()
                 like_button().click()

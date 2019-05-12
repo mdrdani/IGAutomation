@@ -79,7 +79,7 @@ class InstagramBot:
             driver.get(pic_href)
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             try:        
-                #like button      
+                #action comment
                 time.sleep(random.randint(2, 4))
                 comment_box = lambda: driver.find_element_by_xpath('//textarea[@aria-label="Add a comment…"]').click()
                 comment_box().click()
@@ -87,6 +87,7 @@ class InstagramBot:
                 comment_box.send_keys(Keys.ENTER)
                 time.sleep(1)
 
+                #like button
                 like_button = lambda: driver.find_element_by_xpath('//span[@aria-label="Like"]').click()
                 like_button().click()
                 for second in reversed(range(0, random.randint(18, 28))):
