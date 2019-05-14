@@ -11,7 +11,7 @@ class InstagramBot:
         
         #Jika Menggunakan Linux hapus *.exe 
         #Jika Menggunakan Windows tambahkan *.exe
-        self.driver = webdriver.Chrome('./assets/chromedriver.exe')
+        self.driver = webdriver.Chrome('./assets/chromedriver')
     
     def closeBrowser(self):
         self.driver.close()
